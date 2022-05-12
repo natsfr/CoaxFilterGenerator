@@ -1,6 +1,6 @@
 import coaxcal.coax_filter as cf
 
-myCf = cf.CoaxFilter(11.5E-3, 1E-3,12E-3, 2.25, 1)
+myCf = cf.CoaxFilter(11.5E-3, 1E-3,12E-3, 1, 1)
 
 print("### Dataset ###")
 print("Internal cavity: ", myCf.cavRad * 1E3, " mm")
@@ -24,3 +24,4 @@ for i in myCf.lpfList:
         myCoaxFilter.append(('L', curCap))
 
 myCf.setCoaxLPF(myCoaxFilter)
+myCf.runSim()
